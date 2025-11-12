@@ -1,0 +1,8 @@
+flask
+flask-cors
+python-dotenv
+openai
+langchain
+langchain-openai
+pydantic
+google-generativeai
