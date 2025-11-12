@@ -139,7 +139,7 @@ Code_Guardian/
     <td>🔵 C</td>
   </tr>
   <tr>
-    <td>�� C#</td>
+    <td>🟣 C#</td>
     <td>🐘 PHP</td>
     <td>💎 Ruby</td>
   </tr>
@@ -397,7 +397,7 @@ CodeGuardian implements multiple layers of security to protect your code and dat
 
 ### Frontend Interface
 
-- �� **Clean, modern design** with gradient aesthetics
+- 🎨 **Clean, modern design** with gradient aesthetics
 - ⏱️ **Real-time feedback** with loading indicators and progress bars
 - 📱 **Responsive layout** optimized for desktop and mobile devices
 - ✨ **Interactive elements** with smooth hover effects and animations
