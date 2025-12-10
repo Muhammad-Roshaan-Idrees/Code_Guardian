@@ -1,23 +1,38 @@
-ame: Code_Guardian
+name: Code_Guardian
+
 on:
-push:
- branches: [ "main" ]
-pull_request:
- branches: [ "main" ]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
 jobs:
-build-and-deploy:
- runs-on: ubuntu-latest
- steps:
- - name: Checkout code
- uses: actions/checkout@v3
- - name: Setup Node.js
- uses: actions/setup-node@v4
- with:
- node-version: 20
- cache: "npm"
- - name: Install dependencies
- run: npm install
- - name: Run ESLint
- run: npm run lint
- - name: Run Tests
- run: npm test
+  build-and-test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run Tests
+        run: npm test
